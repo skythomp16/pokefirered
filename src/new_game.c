@@ -29,6 +29,7 @@
 #include "berry_powder.h"
 #include "pokemon_jump.h"
 #include "event_scripts.h"
+#include "constants/items.h"
 
 // this file's functions
 static void ResetMiniGamesResults(void);
@@ -137,6 +138,7 @@ void NewGameInitData(void)
     ClearRoamerData();
     gSaveBlock1Ptr->registeredItem = 0;
     ClearBag();
+    AddBagItem(ITEM_EXP_SHARE, 5);
     NewGameInitPCItems();
     ClearEnigmaBerries();
     InitEasyChatPhrases();
